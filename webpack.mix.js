@@ -12,3 +12,4 @@ const mix = require('laravel-mix');
  */
 
 mix.postCss('resources/css/layout.css', 'public/css');
+mix.postCss('resources/css/homepage.css', 'public/css');
