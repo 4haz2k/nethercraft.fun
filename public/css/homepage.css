@@ -136,7 +136,7 @@
 .has-slideshow{
     position: relative;
     z-index: -1;
-    margin-top: -3.25rem;
+    margin-top: -7.25rem;
 }
 
 .nopaddingall {
@@ -157,6 +157,10 @@
     font-size: 1vw;
 }
 
+.text-nav:hover{
+    color: darkorange !important;
+}
+
 .logo a{
     font-size: 1.3vw;
     font-weight: bolder;
@@ -171,6 +175,18 @@
     color: darkorange !important;
 }
 
+.a-none, .a-none:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.social{
+    color: white;
+    transition: all 0.2s;
+}
+.social:hover{
+    color: darkorange;
+}
 /*
 ####################################################
 M E D I A  Q U E R I E S
@@ -184,6 +200,17 @@ Bootstrap 4 breakpoints
     }
     .swiper-container {
         height: 650px !important;
+    }
+    .logo a{
+        position: relative;
+        top: 7px;
+        font-size: 1.25rem !important;
+    }
+    .logo{
+        text-align: center !important;
+    }
+    .social-icons{
+        margin-top: 25px;
     }
 }
 
