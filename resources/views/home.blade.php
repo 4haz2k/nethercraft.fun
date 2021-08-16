@@ -1,39 +1,108 @@
 @extends('layout')
 
 @section('content')
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light approximation">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 font-weight-normal">NetherCraft Project</h1>
-            <p class="lead font-weight-normal">NetherCraft Project - это Minecraft по-новому!</p>
-            <p class="font-weight-normal">Адрес сервера: <strong>Play.NetherCraft.Fun</strong></p>
+{{--    <div class="swiper-container">--}}
+{{--        <!-- Additional required wrapper -->--}}
+{{--        <div class="swiper-wrapper">--}}
+{{--            <!-- Slides -->--}}
+{{--            <div class="swiper-slide" style="background-color: green">Slide 1</div>--}}
+{{--            <div class="swiper-slide" style="background-color: red">Slide 2</div>--}}
+{{--            <div class="swiper-slide" style="background-color: blue">Slide 3</div>--}}
+{{--            ...--}}
+{{--        </div>--}}
+{{--        <!-- If we need pagination -->--}}
+{{--        <div class="swiper-pagination"></div>--}}
+
+{{--        <!-- If we need navigation buttons -->--}}
+{{--        <div class="swiper-button-prev"></div>--}}
+{{--        <div class="swiper-button-next"></div>--}}
+{{--    </div>--}}
+
+<div class="g-navigation">
+    <div class="header-nav">
+        <div class="container-fluid">
+            <div class="row p-2">
+                <div class="col-sm-3 text-nav logo">
+                    <a href="">NetherCraft Project</a>
+                </div>
+                <div class="col-sm-6 d-none d-sm-block">
+                    <div class="row text-nav">
+                        <div class="col-3"><a href="">Главная</a></div>
+                        <div class="col-3"><a href="">О донате</a></div>
+                        <div class="col-3"><a href="">Магазин</a></div>
+                        <div class="col-3"><a href="">Правила</a></div>
+                    </div>
+                </div>
+                <div class="col-sm-3">навигация</div>
+            </div>
         </div>
     </div>
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" style="height: 500px">
-        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden approximation">
-            <div class="my-3 py-3">
-                <h2 class="display-5"><strong>Описание доната</strong></h2>
-                <p class="lead">Здесь вы можете посмотреть возможности доната, его описание и прочее.</p>
+    <div class="has-slideshow">
+        <div class="swiper-container" data-slideshow-autoplay="true" data-slideshow-loop="false" data-slideshow-timeout="8000" data-slideshow-speed="800">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" style="background-color: green">
+                    <div class="slide">
+                        <h3 class="top-title">
+                            <span>NetherCraft Project</span>
+                        </h3>
+                        <h1 class="main-title">
+                            <span>Встречайте, это проект NetherCraft по-новому!</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-color: #ff3440">
+                    <div class="slide">
+                        <h3 class="top-title">
+                            <span>О проекте</span>
+                        </h3>
+                        <h1 class="main-title">
+                            <span>Адрес сервера: play.nethercraft.fun, версия Minecraft 1.9 - 1.16.5</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-color: #718096">
+                    <div class="slide">
+                        <h3 class="top-title">
+                            <span>NetherCraft Project</span>
+                        </h3>
+                        <h1 class="main-title">
+                            <span>Test 3</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-color: #718096">
+                    <div class="slide">
+                        <h3 class="top-title">
+                            <span>NetherCraft Project</span>
+                        </h3>
+                        <h1 class="main-title">
+                            <span>Test 3</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-color: #718096">
+                    <div class="slide">
+                        <h3 class="top-title">
+                            <span>NetherCraft Project</span>
+                        </h3>
+                        <h1 class="main-title">
+                            <span>Test 3</span>
+                        </h1>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden approximation">
-            <div class="my-3 p-3">
-                <h2 class="display-5"><strong>Магазин</strong></h2>
-                <p class="lead">Покупка доната и прочих услуг.</p>
+
+            <div class="navigation">
+                <div class="swiper-button-prev swiper-button-disabled">
+                    <i class="fa fa-angle-up"></i>
+                </div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
+                <div class="swiper-button-next">
+                    <i class="fa fa-angle-down"></i>
+                </div>
             </div>
         </div>
     </div>
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden approximation">
-            <div class="my-3 py-3">
-                <h2 class="display-5"><strong>Техническая поддержка</strong></h2>
-                <p class="lead">Если что-то пошло не так, то техническая поддержка отвечает в течение 2-х часов!</p>
-            </div>
-        </div>
-        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden approximation blur">
-            <div class="my-3 p-3">
-                <h2 class="display-5"><strong>Инструкции</strong></h2>
-                <p class="lead">В этом разделе все возможные инструкции ко всем системам проекта.</p>
-            </div>
-        </div>
-    </div>
+</div>
 @endsection

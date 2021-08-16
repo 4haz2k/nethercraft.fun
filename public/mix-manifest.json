@@ -1,4 +1,7 @@
 {
+    "/js/mainpage.js": "/js/mainpage.js",
     "/css/homepage.css": "/css/homepage.css",
-    "/css/layout.css": "/css/layout.css"
+    "/css/layout.css": "/css/layout.css",
+    "/fonts/Rubik-Italic-VariableFont_wght.ttf": "/fonts/Rubik-Italic-VariableFont_wght.ttf",
+    "/fonts/Rubik-VariableFont_wght.ttf": "/fonts/Rubik-VariableFont_wght.ttf"
 }
