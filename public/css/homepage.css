@@ -424,6 +424,9 @@
     left: 0;
     width: 100vw;
 }
+.hidden{
+    display: none !important;
+}
 /*
 ####################################################
 M E D I A  Q U E R I E S
@@ -456,6 +459,12 @@ Bootstrap 4 breakpoints
         position: relative;
         top: -10px;
         margin-top: 0 !important;
+    }
+    .text-sm-center{
+        text-align: center !important;
+    }
+    .news-text-title{
+        text-align: center !important;
     }
 }
 
@@ -497,9 +506,15 @@ Bootstrap 4 breakpoints
         top: 2px;
         font-size: 1.05rem !important;
     }
+    .news-text-title{
+        font-size: 1.3rem;
+    }
 
     .text-nav{
         font-size: 1.3vw;
+    }
+    .nav-item{
+        font-size: 0.8rem;
     }
 }
 

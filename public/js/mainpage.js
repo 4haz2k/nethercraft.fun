@@ -55,15 +55,13 @@ $container.masonry({
 });
 particlesJS.load('particles-js', 'config/particlesjs-config.json', function () {
   console.log('callback - particles.js config loaded');
-}); //
-// $(function(){
-//     $('.grid').masonry({
-//         itemSelector: '.grid-item',
-//         columnWidth: 255,
-//         gutter: 20,
-//         fitWidth: true
-//     }).masonry('reload');
-// });
+});
+$(function () {
+  $('#navbutton').click(function () {
+    $('#MenuClosed').toggleClass('hidden');
+    $('#MenuOpened').toggleClass('hidden');
+  });
+});
 
 /***/ }),
 

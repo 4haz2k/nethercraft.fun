@@ -129,14 +129,17 @@
 
 <div class="container-fluid pt-4" style="background-color: #030303">
     <div class="row news-nav">
-        <div class="col-12">
-            <nav class="navbar navbar-expand-lg">
-                <span class="navbar-brand news-text-title">Новости</span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <div class="col-12 text-sm-center" style="margin-left: 5px;">
+            <nav class="navbar navbar-expand-lg navbar-expand-md">
+                <span class="navbar-brand news-text-title" style="margin-left: 18px;">Новости</span>
+                <button id="navbutton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="color: white; padding: 5px; padding-left: 25px;">
+                        <i id="MenuClosed" class="fa fa-angle-down"></i>
+                        <i id="MenuOpened" class="fa fa-angle-up hidden"></i>
+                    </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
+                    <div class="navbar-nav text-sm-center">
                         <a class="nav-item nav-link news-current" href="#">Все новости</a>
                         <a class="nav-item nav-link" href="#">Релизы</a>
                         <a class="nav-item nav-link" href="#">Маленькие обновления</a>
