@@ -127,7 +127,7 @@
     </div>
 </div>
 
-<div class="container-fluid pt-4" style="background-color: #030303">
+<div class="container-fluid pt-4">
     <div class="row news-nav">
         <div class="col-12 text-sm-center" style="margin-left: 5px;">
             <nav class="navbar navbar-expand-lg navbar-expand-md">
@@ -229,7 +229,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 @endsection

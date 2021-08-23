@@ -413,9 +413,11 @@
     background: darkorange;
     border-radius: 5px;
 }
+
 .news-current:hover{
     text-decoration: none;
 }
+
 #particles-js{
     z-index: 0;
     position: fixed;
@@ -424,8 +426,39 @@
     left: 0;
     width: 100vw;
 }
+
 .hidden{
     display: none !important;
+}
+
+.footer-title{
+    color: white;
+    font-family: Rubik;
+    font-size: 1.3rem;
+}
+
+.footer-item{
+    color: rgba(136, 136, 136, 0.7);
+    font-family: Rubik;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.footer-item:hover{
+    color: white;
+}
+
+.rights-reserved{
+    color: rgba(136, 136, 136, 0.7);
+    font-family: Rubik;
+    font-size: 1rem;
+}
+
+.logo-footer{
+    color: white;
+    font-family: Rubik;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 /*
 ####################################################
