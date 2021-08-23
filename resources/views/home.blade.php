@@ -17,7 +17,7 @@
 {{--        <div class="swiper-button-prev"></div>--}}
 {{--        <div class="swiper-button-next"></div>--}}
 {{--    </div>--}}
-
+<div id="particles-js"></div>
 <div class="g-navigation">
     <div class="header-nav">
         <div class="container-fluid">
@@ -62,7 +62,7 @@
         <div class="swiper-container" data-slideshow-autoplay="true" data-slideshow-loop="false" data-slideshow-timeout="8000" data-slideshow-speed="800">
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic.png') }}'); background-position: center top">
+                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic4.png') }}'); background-position: center top;">
                     <div class="slide">
                         <h3 class="top-title">
                             <span>NetherCraft Project</span>
@@ -82,33 +82,33 @@
                         </h1>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-color: #718096">
+                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic3.png') }}'); background-position: center 5vh;">
                     <div class="slide">
                         <h3 class="top-title">
                             <span>NetherCraft Project</span>
                         </h3>
                         <h1 class="main-title">
-                            <span>Test 3</span>
+                            <span>Мир намного ярче через Gucci, это факт. Никита лох))00)</span>
                         </h1>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-color: #718096">
+                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic.png') }}'); background-position: center 5vh;">
                     <div class="slide">
                         <h3 class="top-title">
                             <span>NetherCraft Project</span>
                         </h3>
                         <h1 class="main-title">
-                            <span>Test 3</span>
+                            <span>Test 4</span>
                         </h1>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-color: #718096">
+                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic5.png') }}'); background-position: center 5vh;">
                     <div class="slide">
                         <h3 class="top-title">
                             <span>NetherCraft Project</span>
                         </h3>
                         <h1 class="main-title">
-                            <span>Test 3</span>
+                            <span>Test 5</span>
                         </h1>
                     </div>
                 </div>
@@ -124,6 +124,109 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4" style="background-color: black">
+    <div class="row news-nav">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg">
+                <span class="navbar-brand news-text-title">Новости</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link news-current" href="#">Все новости</a>
+                        <a class="nav-item nav-link" href="#">Релизы</a>
+                        <a class="nav-item nav-link" href="#">Маленькие обновления</a>
+                        <a class="nav-item nav-link" href="#">Игроку</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-12">
+            <div class="grid">
+                <div class="grid-item grid-item--height5">
+                    <div class="news-img">
+                        <img src="https://picsum.photos/255/345" alt="">
+                    </div>
+                    <div class="news-desc">
+                        <div class="news-date">May 7, 2021</div>
+                        <div class="news-title">
+                            <span>Exciting New Theme with Cutting-edge Features</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item--height1">
+                    <div class="news-img">
+                        <img src="https://picsum.photos/255/120" alt="">
+                    </div>
+                    <div class="news-desc">
+                        <div class="news-date">May 11, 2021</div>
+                        <div class="news-title">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item--height4">
+                    <div class="news-img">
+                        <img src="https://picsum.photos/255/340" alt="">
+                    </div>
+                    <div class="news-desc">
+                        <div class="news-date">May 20, 2021</div>
+                        <div class="news-title">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item--height3">
+                    <div class="news-img">
+                        <img src="https://picsum.photos/255/330" alt="">
+                    </div>
+                    <div class="news-desc">
+                        <div class="news-date">May 22, 2021</div>
+                        <div class="news-title">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item--height2">
+                    <div class="news-img">
+                        <img src="https://picsum.photos/255/140" alt="">
+                    </div>
+                    <div class="news-desc">
+                        <div class="news-date">May 1, 2021</div>
+                        <div class="news-title">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item--height1">
+                    <div class="news-img">
+                        <img src="https://picsum.photos/255/120" alt="">
+                    </div>
+                    <div class="news-desc">
+                        <div class="news-date">May 22, 2021</div>
+                        <div class="news-title">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item--height2">
+                    <div class="news-img">
+                        <img src="https://picsum.photos/255/140" alt="">
+                    </div>
+                    <div class="news-desc">
+                        <div class="news-date">May 22, 2021</div>
+                        <div class="news-title">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 @endsection

@@ -16,6 +16,8 @@
         "postcss": "^8.1.14"
     },
     "dependencies": {
+        "masonry-layout": "^4.2.2",
+        "mdbootstrap": "^4.20.0",
         "swiper": "^6.8.1"
     }
 }

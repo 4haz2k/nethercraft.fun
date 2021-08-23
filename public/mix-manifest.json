@@ -1,7 +1,15 @@
 {
     "/js/mainpage.js": "/js/mainpage.js",
+    "/js/particles.js": "/js/particles.js",
     "/css/homepage.css": "/css/homepage.css",
     "/css/layout.css": "/css/layout.css",
     "/fonts/Rubik-Italic-VariableFont_wght.ttf": "/fonts/Rubik-Italic-VariableFont_wght.ttf",
-    "/fonts/Rubik-VariableFont_wght.ttf": "/fonts/Rubik-VariableFont_wght.ttf"
+    "/fonts/Rubik-VariableFont_wght.ttf": "/fonts/Rubik-VariableFont_wght.ttf",
+    "/js/popper.js": "/js/popper.js",
+    "/js/bootstrap.js": "/js/bootstrap.js",
+    "/js/mdb.js": "/js/mdb.js",
+    "/js/jquery.min.js": "/js/jquery.min.js",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
+    "/css/mdb.min.css": "/css/mdb.min.css",
+    "/css/style.css": "/css/style.css"
 }

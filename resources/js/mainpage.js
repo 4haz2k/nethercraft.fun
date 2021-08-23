@@ -41,3 +41,23 @@ swiper.on('slideChange', function() {
         $('.swiper-button-next').removeClass('swiper-button-disabled');
     }
 });
+var $container = $('.grid');
+$container.masonry({
+    itemSelector: '.grid-item',
+    columnWidth: 255,
+    gutter: 20,
+    fitWidth: true
+});
+
+particlesJS.load('particles-js', 'config/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
+});
+//
+// $(function(){
+//     $('.grid').masonry({
+//         itemSelector: '.grid-item',
+//         columnWidth: 255,
+//         gutter: 20,
+//         fitWidth: true
+//     }).masonry('reload');
+// });

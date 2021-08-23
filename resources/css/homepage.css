@@ -318,6 +318,112 @@
 {
     transform: none;
 }
+
+.top-nav{
+    margin-top: 10px;
+}
+
+/* NEWS GRID */
+.grid{
+    margin: auto auto;
+}
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-item {
+    width: 255px;
+    height: 160px;
+    border: 1px solid #333;
+    border-color: hsla(0, 0%, 0%, 0.5);
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.grid-item .news-img{
+    margin-bottom: 1.5rem;
+}
+.grid-item .news-img img{
+    border-radius: 5px;
+}
+.grid-item .news-desc{
+    position: static;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.news-desc .news-date{
+    font-weight: 400;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: white;
+}
+
+.news-desc .news-title{
+    font-size: 1.4rem;
+    line-height: 1.44;
+}
+
+.news-title span{
+    color: white;
+    font-family: Rubik;
+}
+
+.grid-item--height1 { height: 260px; }
+.grid-item--height2 { height: 300px; }
+.grid-item--height3 { height: 470px; }
+.grid-item--height4 { height: 480px; }
+.grid-item--height5 { height: 485px; }
+
+.news-nav{
+    padding: 40px 50px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.news-text-title{
+    font-family: Rubik;
+    font-weight: 700;
+    font-size: 2vw;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item{
+    cursor: pointer;
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 0.94vw;
+    color: white;
+    text-decoration: none;
+    padding: 0.350rem 0.9rem;
+    margin: 5px;
+}
+.nav-item:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.news-current{
+    background: darkorange;
+    border-radius: 5px;
+}
+.news-current:hover{
+    text-decoration: none;
+}
+#particles-js{
+    z-index: 0;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
 /*
 ####################################################
 M E D I A  Q U E R I E S
@@ -349,6 +455,7 @@ Bootstrap 4 breakpoints
     .top-nav{
         position: relative;
         top: -10px;
+        margin-top: 0 !important;
     }
 }
 
