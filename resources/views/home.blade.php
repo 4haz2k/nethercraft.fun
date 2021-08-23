@@ -62,7 +62,7 @@
         <div class="swiper-container" data-slideshow-autoplay="true" data-slideshow-loop="false" data-slideshow-timeout="8000" data-slideshow-speed="800">
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic4.png') }}'); background-position: center top;">
+                <div class="swiper-slide" style="background:  linear-gradient(180deg, rgba(0,0,0,0) 0%, black 98%), url('{{ asset('img/pic4.png') }}') no-repeat top center;">
                     <div class="slide">
                         <h3 class="top-title">
                             <span>NetherCraft Project</span>
@@ -72,7 +72,7 @@
                         </h1>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic2.png') }}'); background-position: center 5vh;">
+                <div class="swiper-slide" style="background:  linear-gradient(180deg, rgba(0,0,0,0) 0%, black 98%), url('{{ asset('img/pic2.png') }}') no-repeat top center;">
                     <div class="slide">
                         <h3 class="top-title">
                             <span>О проекте</span>
@@ -82,7 +82,7 @@
                         </h1>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic3.png') }}'); background-position: center 5vh;">
+                <div class="swiper-slide" style="background:  linear-gradient(180deg, rgba(0,0,0,0) 0%, black 98%), url('{{ asset('img/pic3.png') }}') no-repeat top center;">
                     <div class="slide">
                         <h3 class="top-title">
                             <span>NetherCraft Project</span>
@@ -92,7 +92,7 @@
                         </h1>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic.png') }}'); background-position: center 5vh;">
+                <div class="swiper-slide" style="background:  linear-gradient(180deg, rgba(0,0,0,0) 0%, black 98%), url('{{ asset('img/pic.png') }}') no-repeat top center;">
                     <div class="slide">
                         <h3 class="top-title">
                             <span>NetherCraft Project</span>
@@ -102,7 +102,7 @@
                         </h1>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-image: url('{{ asset('img/pic5.png') }}'); background-position: center 5vh;">
+                <div class="swiper-slide" style="background:  linear-gradient(180deg, rgba(0,0,0,0) 0%, black 98%), url('{{ asset('img/pic5.png') }}') no-repeat top center;">
                     <div class="slide">
                         <h3 class="top-title">
                             <span>NetherCraft Project</span>
@@ -127,7 +127,7 @@
     </div>
 </div>
 
-<div class="container-fluid pt-4" style="background-color: black">
+<div class="container-fluid pt-4" style="background-color: #030303">
     <div class="row news-nav">
         <div class="col-12">
             <nav class="navbar navbar-expand-lg">
