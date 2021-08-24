@@ -1,22 +1,6 @@
 @extends('layout')
 
 @section('content')
-{{--    <div class="swiper-container">--}}
-{{--        <!-- Additional required wrapper -->--}}
-{{--        <div class="swiper-wrapper">--}}
-{{--            <!-- Slides -->--}}
-{{--            <div class="swiper-slide" style="background-color: green">Slide 1</div>--}}
-{{--            <div class="swiper-slide" style="background-color: red">Slide 2</div>--}}
-{{--            <div class="swiper-slide" style="background-color: blue">Slide 3</div>--}}
-{{--            ...--}}
-{{--        </div>--}}
-{{--        <!-- If we need pagination -->--}}
-{{--        <div class="swiper-pagination"></div>--}}
-
-{{--        <!-- If we need navigation buttons -->--}}
-{{--        <div class="swiper-button-prev"></div>--}}
-{{--        <div class="swiper-button-next"></div>--}}
-{{--    </div>--}}
 <div id="particles-js"></div>
 <div class="g-navigation">
     <div class="header-nav">
@@ -150,83 +134,85 @@
         </div>
         <div class="col-12">
             <div class="grid">
-                <div class="grid-item grid-item--height5">
-                    <div class="news-img">
-                        <img src="https://picsum.photos/255/345" alt="">
-                    </div>
-                    <div class="news-desc">
-                        <div class="news-date">May 7, 2021</div>
-                        <div class="news-title">
-                            <span>Exciting New Theme with Cutting-edge Features</span>
+                @for($i = 0; $i <= 6; $i++)
+                    <div class="grid-item grid-item--height{{$news_pagination[$i]['type']}}">
+                        <div class="news-img">
+                            <img width="{{$news_pagination[$i]['size']['width']}}" height="{{$news_pagination[$i]['size']['height']}}" src="{{$news[$i]->img}}" alt="">
+                        </div>
+                        <div class="news-desc">
+                            <div class="news-date">{{\Carbon\Carbon::parse($news[$i]->date)->format('d M, Y')}}</div>
+                            <div class="news-title">
+                                <span>{{$news[$i]->title}}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="grid-item grid-item--height1">
-                    <div class="news-img">
-                        <img src="https://picsum.photos/255/120" alt="">
-                    </div>
-                    <div class="news-desc">
-                        <div class="news-date">May 11, 2021</div>
-                        <div class="news-title">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item grid-item--height4">
-                    <div class="news-img">
-                        <img src="https://picsum.photos/255/340" alt="">
-                    </div>
-                    <div class="news-desc">
-                        <div class="news-date">May 20, 2021</div>
-                        <div class="news-title">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item grid-item--height3">
-                    <div class="news-img">
-                        <img src="https://picsum.photos/255/330" alt="">
-                    </div>
-                    <div class="news-desc">
-                        <div class="news-date">May 22, 2021</div>
-                        <div class="news-title">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item grid-item--height2">
-                    <div class="news-img">
-                        <img src="https://picsum.photos/255/140" alt="">
-                    </div>
-                    <div class="news-desc">
-                        <div class="news-date">May 1, 2021</div>
-                        <div class="news-title">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item grid-item--height1">
-                    <div class="news-img">
-                        <img src="https://picsum.photos/255/120" alt="">
-                    </div>
-                    <div class="news-desc">
-                        <div class="news-date">May 22, 2021</div>
-                        <div class="news-title">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item grid-item--height2">
-                    <div class="news-img">
-                        <img src="https://picsum.photos/255/140" alt="">
-                    </div>
-                    <div class="news-desc">
-                        <div class="news-date">May 22, 2021</div>
-                        <div class="news-title">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                        </div>
-                    </div>
-                </div>
+                @endfor
+{{--                <div class="grid-item grid-item--height1">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <img src="https://picsum.photos/255/120" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="news-desc">--}}
+{{--                        <div class="news-date">May 11, 2021</div>--}}
+{{--                        <div class="news-title">--}}
+{{--                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="grid-item grid-item--height4">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <img src="https://picsum.photos/255/340" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="news-desc">--}}
+{{--                        <div class="news-date">May 20, 2021</div>--}}
+{{--                        <div class="news-title">--}}
+{{--                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="grid-item grid-item--height3">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <img src="https://picsum.photos/255/330" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="news-desc">--}}
+{{--                        <div class="news-date">May 22, 2021</div>--}}
+{{--                        <div class="news-title">--}}
+{{--                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="grid-item grid-item--height2">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <img src="https://picsum.photos/255/140" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="news-desc">--}}
+{{--                        <div class="news-date">May 1, 2021</div>--}}
+{{--                        <div class="news-title">--}}
+{{--                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="grid-item grid-item--height1">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <img src="https://picsum.photos/255/120" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="news-desc">--}}
+{{--                        <div class="news-date">May 22, 2021</div>--}}
+{{--                        <div class="news-title">--}}
+{{--                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="grid-item grid-item--height2">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <img src="https://picsum.photos/255/140" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="news-desc">--}}
+{{--                        <div class="news-date">May 22, 2021</div>--}}
+{{--                        <div class="news-title">--}}
+{{--                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
