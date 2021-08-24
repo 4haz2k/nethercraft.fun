@@ -15,7 +15,3 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ HomeController::class, 'news_section' ]);
-//
-//Route::get('/', function (){
-//   return view('home');
-//});
