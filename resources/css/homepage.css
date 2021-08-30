@@ -1,15 +1,3 @@
-.approximation {
-    background: url('https://webdevhelp.ru/upload/solutions/bg_zoom.jpg') center center;
-    background-size: 100% 100%;
-    transition: background-size .45s ease-in;
-    -moz-transition: background-size .45s ease-in;
-    -web-kit-transition: background-size .45s ease-in;
-}
-
-.approximation:hover { /* IE 9 */ /* Safari */
-    background-size: 101.5% 101.5%
-}
-
 .flex-equal > * {
     -ms-flex: 1;
     -webkit-box-flex: 1;

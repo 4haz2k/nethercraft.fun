@@ -1,0 +1,69 @@
+.background{
+    background-image: url('/img/errors/503.png');
+    width: 100%;
+    height: 400px;
+    background-position: center 30%;
+}
+
+.shadow{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(100deg, #000000bf 20%, rgba(255, 255, 255, 0));
+}
+
+.title_error{
+    font-family: Rubik;
+    font-size: 2.3vw;
+    color: white;
+    font-weight: 600;
+}
+
+.description_error{
+    font-size: 1vw;
+    font-family: Rubik;
+    color: white;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+Bootstrap 4 breakpoints
+*/
+/* Маленькие устройства (телефоны с горизонтальной ориентацией, 544 пикселей и выше) */
+@media all and (max-width: 544px) { /*1rem = 16px*/
+    .title_error{
+        font-size: 1.25rem !important;
+    }
+    .description_error{
+        font-size: 1rem !important;
+    }
+    .error-block{
+        text-align: center !important;
+    }
+}
+
+/* Средние устройства (планшеты, 768 пикселей и выше) Переключатель панели навигации появляется в этой точке останова */
+@media all and (max-width: 768px) { /*1rem = 16px*/
+    .title_error{
+        font-size: 1.5rem;
+    }
+    .description_error{
+        font-size: 1.25rem;
+    }
+    .error-block{
+        text-align: center !important;
+    }
+}
+
+/* Большие устройства (настольные компьютеры, 992 пикселей и выше) */
+@media all and (max-width: 992px) { /*1rem = 16px*/
+
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url('/fonts/Rubik-VariableFont_wght.ttf');
+}
+

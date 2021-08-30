@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'NetherCraft Project')
 @section('content')
 <div id="particles-js"></div>
 <div class="g-navigation">

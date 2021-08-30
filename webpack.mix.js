@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.postCss('resources/css/layout.css', 'public/css');
 mix.postCss('resources/css/homepage.css', 'public/css');
+mix.postCss('resources/css/errors_style.css', 'public/css');
 mix.js('resources/js/mainpage.js', 'public/js');
 mix.copy('resources/fonts/Rubik-Italic-VariableFont_wght.ttf', 'public/fonts');
 mix.copy('resources/fonts/Rubik-VariableFont_wght.ttf', 'public/fonts');

@@ -56,11 +56,78 @@ $container.masonry({
 particlesJS.load('particles-js', 'config/particlesjs-config.json', function () {
   console.log('callback - particles.js config loaded');
 });
+
+function cropAndCenterImage(el, size) {
+  //el = img wrapper
+  //img = img element
+  if (size === undefined || size === null) {
+    size = 154;
+  }
+
+  var $el = $(el);
+  var $img = $(el + " img"); //console.log($el);
+  //console.log($img);
+
+  $img.width("auto").height("auto");
+  var imgWidth = $img.width();
+  var imgHeight = $img.height(); //console.log(imgHeight, imgWidth);
+  //hopefully that returns the img to it's default height and width by making the inline style to empty quotes
+
+  if (imgWidth > imgHeight) {
+    //Crop image
+    //console.log("width greater than height");
+    if (imgHeight >= size) {
+      //console.log("hit if");
+      $img.height(size);
+      imgHeight = $img.height();
+      imgWidth = $img.width();
+      $el.height(imgHeight).width(imgHeight);
+    } else {
+      //console.log("hit else");
+      $el.height(imgHeight).width(imgHeight);
+      $img.height(imgHeight).width(imgWidth);
+    } //Center image horizontally
+
+
+    var leftInt = (imgWidth - $el.width()) / 2;
+    $img.css({
+      "margin-left": "-" + leftInt + "px",
+      "margin-top": "0"
+    });
+  } else {
+    //Crop image
+    //console.log("height greater than width");
+    if (imgWidth >= size) {
+      $img.width(size);
+      imgHeight = $img.height();
+      imgWidth = $img.width();
+      $el.height(imgWidth).width(imgWidth);
+    } else {
+      $el.height(imgWidth).width(imgWidth);
+      $img.height(imgHeight).width(imgWidth);
+    }
+
+    imgHeight = $img.height(); //Center image vertically
+
+    var topInt = (imgHeight - $el.height()) / 2; //console.log(topInt);
+
+    $img.css({
+      "margin-top": "-" + topInt + "px",
+      "margin-left": "0"
+    });
+  }
+}
+
 $(function () {
   $('#navbutton').click(function () {
     $('#MenuClosed').toggleClass('hidden');
     $('#MenuOpened').toggleClass('hidden');
-  });
+  }); // var classes = $('.grid-item').attr('class').split(' ');
+  //
+  // for(var i=0; i < classes.length; i++){
+  //    cropAndCenterImage(".news-img", $('.'+classes[i]).height());
+  // }
+  // cropAndCenterImage(".news-img", $('.news-img').attr('class').split(' ')[1].height());
 });
 
 /***/ }),
@@ -82,6 +149,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************!*\
   !*** ./resources/css/homepage.css ***!
   \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/errors_style.css":
+/*!****************************************!*\
+  !*** ./resources/css/errors_style.css ***!
+  \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -178,6 +258,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/mainpage": 0,
+/******/ 			"css/errors_style": 0,
 /******/ 			"css/homepage": 0,
 /******/ 			"css/layout": 0
 /******/ 		};
@@ -227,9 +308,10 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/homepage","css/layout"], () => (__webpack_require__("./resources/js/mainpage.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/homepage","css/layout"], () => (__webpack_require__("./resources/css/layout.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/homepage","css/layout"], () => (__webpack_require__("./resources/css/homepage.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/errors_style","css/homepage","css/layout"], () => (__webpack_require__("./resources/js/mainpage.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/errors_style","css/homepage","css/layout"], () => (__webpack_require__("./resources/css/layout.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/errors_style","css/homepage","css/layout"], () => (__webpack_require__("./resources/css/homepage.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/errors_style","css/homepage","css/layout"], () => (__webpack_require__("./resources/css/errors_style.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

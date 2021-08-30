@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ HomeController::class, 'news_section' ]);
+Route::get('news/article_{id}', [HomeController::class, 'news_current'])->where('id', '\d+');

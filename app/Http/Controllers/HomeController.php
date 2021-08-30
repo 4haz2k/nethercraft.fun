@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\NewsSection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -20,5 +22,9 @@ class HomeController extends Controller
             ['type' => 2, 'size' => ['width' => 255, 'height' => 140]]
         );
         return view('home', compact('news', 'news_pagination'));
+    }
+
+    public function news_current($id){
+        return view('news', ['news' => NewsSection::findOrFail($id)]);
     }
 }
