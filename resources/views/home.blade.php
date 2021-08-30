@@ -135,19 +135,22 @@
         </div>
         <div class="col-12">
             <div class="grid">
-                @for($i = 0; $i <= 6; $i++)
-                    <div class="grid-item grid-item--height{{$news_pagination[$i]['type']}}">
-                        <div class="news-img" style="background-image:url({{$news[$i]->img}}); width: {{$news_pagination[$i]['size']['width']}}px; height: {{$news_pagination[$i]['size']['height']}}px">
-{{--                            <img width="{{$news_pagination[$i]['size']['width']}}" height="{{$news_pagination[$i]['size']['height']}}" src="{{$news[$i]->img}}" alt="">--}}
-                        </div>
-                        <div class="news-desc">
-                            <div class="news-date">{{Jenssegers\Date\Date::parse($news[$i]->date)->format('d M, Y')}}</div>
-                            <div class="news-title">
-                                <span>{{$news[$i]->title}}</span>
+                @foreach($news as $new)
+                    {{$i = mt_rand(0, 6)}}
+                    <a href="/news/article_{{$new->id}}">
+                        <div class="grid-item grid-item--height{{$news_pagination[$i]['type']}}">
+                            <div class="news-img" style="background-image:url({{$new->img}}); width: {{$news_pagination[$i]['size']['width']}}px; height: {{$news_pagination[$i]['size']['height']}}px">
+    {{--                            <img width="{{$news_pagination[$i]['size']['width']}}" height="{{$news_pagination[$i]['size']['height']}}" src="{{$news[$i]->img}}" alt="">--}}
+                            </div>
+                            <div class="news-desc">
+                                <div class="news-date">{{Jenssegers\Date\Date::parse($new->date)->format('d M, Y')}}</div>
+                                <div class="news-title">
+                                    <span>{{$new->title}}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endfor
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>
