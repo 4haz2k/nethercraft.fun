@@ -334,10 +334,13 @@
 
 .grid-item .news-img{
     margin-bottom: 1.5rem;
-}
-.grid-item .news-img img{
+    background-position:center center;
+    background-size:cover;
     border-radius: 5px;
 }
+/*.grid-item .news-img img{*/
+/*    border-radius: 5px;*/
+/*}*/
 .grid-item .news-desc{
     position: static;
     width: 100%;
