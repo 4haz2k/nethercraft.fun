@@ -49,9 +49,7 @@ $container.masonry({
     fitWidth: true
 });
 
-particlesJS.load('particles-js', 'config/particlesjs-config.json', function() {
-    console.log('callback - particles.js config loaded');
-});
+particlesJS.load('particles-js', 'config/particlesjs-config.json');
 
 function cropAndCenterImage(el, size) {
     //el = img wrapper

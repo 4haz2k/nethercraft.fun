@@ -19,6 +19,7 @@ class CreateNewsSectionsTable extends Migration
             $table->string('description');
             $table->date('date');
             $table->string('img');
+            $table->integer('bought_times');
             $table->timestamps();
         });
     }

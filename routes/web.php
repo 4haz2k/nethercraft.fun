@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ HomeController::class, 'news_section' ]);
-Route::get('news/article_{id}', [HomeController::class, 'news_current'])->where('id', '\d+');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'news_section']);
+Route::get('news/article_{id}', [App\Http\Controllers\HomeController::class, 'news_current'])->where('id', '\d+');
+Route::get('/shop', [\App\Http\Controllers\ShopController::class, 'index']);

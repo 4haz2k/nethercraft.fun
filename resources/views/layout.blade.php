@@ -51,7 +51,7 @@
                 </ul>
             </div>
             <div class="col-12 text-center rights-reserved mt-5">
-                © 2021 NetherCraft Project. Все права защищены.
+                © 2020 - {{Jenssegers\Date\Date::today()->format("Y")}} NetherCraft Project. Все права защищены.
             </div>
         </div>
     </footer>
