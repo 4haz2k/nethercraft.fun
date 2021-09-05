@@ -5,6 +5,114 @@
 .footer-item:hover{
     color: black !important;
 }
+
 .logo-footer{
     color: black !important;
+}
+
+.donate-title{
+    font-family: Rubik;
+    color: black;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/*
+EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
+*/
+
+.rectangle{
+    background: navajowhite;
+    width: 180px;
+    height: 250px;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+}
+
+.item-block{
+    margin: 0 auto;
+    font-family: Rubik;
+}
+
+.item-block .item-img{
+    text-align: center;
+}
+
+.item-block .item-title{
+    width: 90%;
+    height: 35px;
+    background: gray;
+    border-radius: 5%;
+    font-size: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.item-quantities{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-more{
+    justify-content: left;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.item-less{
+    justify-content: right;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.item-field{
+    justify-content: center;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.item-button{
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.plus_button{
+    background-image: url("/img/shop/items/plus.png");
+    height: 20px;
+    width: 20px;
+    transition: all 0.2s;
+}
+
+.plus_button:hover{
+    background-image: url("/img/shop/items/plus_hover.png");
+}
+
+.minus_button{
+    background-image: url("/img/shop/items/minus.png");
+    height: 20px;
+    width: 20px;
+    transition: all 0.2s;
+}
+
+.minus_button:hover{
+    background-image: url("/img/shop/items/minus_hover.png");
+    height: 20px;
+    width: 20px;
+    transition: all 0.2s;
+    margin: auto auto;
+}
+
+.field_button{
+    width: 100%;
+    height: 85%;
+    margin: auto auto;
+}
+
+.buy-item{
+    width: 90%;
 }

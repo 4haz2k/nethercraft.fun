@@ -462,31 +462,39 @@ Bootstrap 4 breakpoints
     .navigation{
         right: 30px;
     }
+
     .swiper-container {
         height: 650px !important;
     }
+
     .logo a{
         position: relative;
         top: 7px;
         font-size: 1.25rem !important;
     }
+
     .logo{
         text-align: center !important;
     }
+
     .social-icons{
         margin-top: 25px !important;
     }
+
     .swiper-slide{
         background-position: center top !important;
     }
+
     .top-nav{
         position: relative;
         top: -10px;
         margin-top: 0 !important;
     }
+
     .text-sm-center{
         text-align: center !important;
     }
+
     .news-text-title{
         text-align: center !important;
     }
@@ -522,14 +530,17 @@ Bootstrap 4 breakpoints
     .main-title{
         font-size: 2rem;
     }
+
     .top-title {
         font-size: 1rem;
     }
+
     .logo a{
         position: relative;
         top: 2px;
         font-size: 1.05rem !important;
     }
+
     .news-text-title{
         font-size: 1.3rem;
     }
@@ -537,6 +548,7 @@ Bootstrap 4 breakpoints
     .text-nav{
         font-size: 1.3vw;
     }
+
     .nav-item{
         font-size: 0.8rem;
     }
