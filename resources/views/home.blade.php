@@ -15,7 +15,7 @@
                     <ul id="menu">
                         <li><a href="#">Главная</a></li>
                         <li><a href="#">О донате</a></li>
-                        <li><a href="#">Магазин</a></li>
+                        <li><a href="{{ url('shop') }}">Магазин</a></li>
                         <li><a href="#">Правила</a></li>
                     </ul>
                 </div>
@@ -28,7 +28,7 @@
                     <div class="row text-nav">
                         <div class="col-3 w-50"><a href="" class="a-none social">Главная</a></div>
                         <div class="col-3 w-50"><a href="" class="a-none social">О донате</a></div>
-                        <div class="col-3 w-50"><a href="" class="a-none social">Магазин</a></div>
+                        <div class="col-3 w-50"><a href="{{ url('shop') }}" class="a-none social">Магазин</a></div>
                         <div class="col-3 w-50"><a href="" class="a-none social">Правила</a></div>
                     </div>
                 </div>

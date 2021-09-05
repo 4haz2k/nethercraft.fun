@@ -11,17 +11,21 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.postCss('resources/css/layout.css', 'public/css');
-mix.postCss('resources/css/homepage.css', 'public/css');
-mix.postCss('resources/css/errors_style.css', 'public/css');
-mix.js('resources/js/mainpage.js', 'public/js');
-mix.copy('resources/fonts/Rubik-Italic-VariableFont_wght.ttf', 'public/fonts');
-mix.copy('resources/fonts/Rubik-VariableFont_wght.ttf', 'public/fonts');
-mix.copy('node_modules/mdbootstrap/js/popper.js','public/js')
+mix.postCss('resources/css/layout.css', 'public/css')
+    .postCss('resources/css/homepage.css', 'public/css')
+    .postCss('resources/css/errors_style.css', 'public/css')
+    .postCss('resources/css/shop/shop.css', 'public/css/shop');
+
+mix.js('resources/js/mainpage.js', 'public/js')
+    .js('resources/js/particles.js', 'public/js');
+
+mix.copy('resources/fonts/Rubik-Italic-VariableFont_wght.ttf', 'public/fonts')
+    .copy('resources/fonts/Rubik-VariableFont_wght.ttf', 'public/fonts')
+    .copy('node_modules/mdbootstrap/js/popper.js','public/js')
     .copy('node_modules/mdbootstrap/js/bootstrap.js','public/js')
     .copy('node_modules/mdbootstrap/js/mdb.js','public/js')
     .copy('node_modules/mdbootstrap/js/jquery.min.js', 'public/js')
     .copy('node_modules/mdbootstrap/css/bootstrap.min.css', 'public/css')
     .copy('node_modules/mdbootstrap/css/mdb.min.css', 'public/css')
     .copy('node_modules/mdbootstrap/css/style.css', 'public/css')
-    .js('resources/js/particles.js', 'public/js');
+

@@ -20,6 +20,7 @@ class CreateItemsTable extends Migration
             $table->text('item_meta')->comment('Идентификатор предмета в игре');
             $table->text('category')->comment('Категория предмета');
             $table->text('img')->comment('Ссылка на изображение');
+            $table->integer('bought_times')->comment('Кол-во покупок предмета');
             $table->timestamps();
         });
     }

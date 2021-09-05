@@ -29,7 +29,7 @@
                     <li><a class="footer-item" href="#">Правила проекта</a></li>
                     <li><a class="footer-item" href="#">Описание доната</a></li>
                     <li><a class="footer-item" href="#">Инструкция</a></li>
-                    <li><a class="footer-item" href="#">Магазин</a></li>
+                    <li><a class="footer-item" href="{{ url('shop') }}">Магазин</a></li>
                 </ul>
             </div>
             <div class="col-6 col-md">

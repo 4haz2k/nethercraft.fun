@@ -11,3 +11,80 @@
     color: #fff;
     text-decoration: none;
 }
+
+.background{
+    position: relative;
+    z-index: -1;
+    margin-top: -9.25rem;
+    background-position: center 40%;
+    height: 550px;
+}
+
+.shadow{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(100deg, #000000bf 20%, rgba(255, 255, 255, 0));
+}
+
+.title-block{
+    font-family: Rubik;
+    color: white;
+    position: absolute;
+    top: 30%; /*sm - top: 20%; text-align: center*/
+}
+
+.title{
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+.description{
+    font-size: 1.3vw;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+Bootstrap 4 breakpoints
+*/
+/* Маленькие устройства (телефоны с горизонтальной ориентацией, 544 пикселей и выше) */
+@media all and (max-width: 544px) { /*1rem = 16px*/
+    .title-block{
+        text-align: center;
+        top: 20%;
+    }
+
+    .title{
+        font-size: 2.35rem;
+    }
+
+    .description{
+        font-size: 1.25rem;
+    }
+}
+
+/* Средние устройства (планшеты, 768 пикселей и выше) Переключатель панели навигации появляется в этой точке останова */
+@media all and (max-width: 768px) { /*1rem = 16px*/
+    .title{
+        font-size: 2.35rem;
+    }
+
+    .description{
+        font-size: 1.25rem;
+    }
+}
+
+/* Большие устройства (настольные компьютеры, 992 пикселей и выше) */
+@media all and (max-width: 992px) { /*1rem = 16px*/
+    .title{
+        font-size: 2.35rem;
+    }
+
+    .description{
+        font-size: 1.25rem;
+    }
+}
