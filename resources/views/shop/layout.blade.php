@@ -25,7 +25,7 @@
                         <span></span>
                         <span></span>
                         <ul id="menu">
-                            <li><a href="#">Главная</a></li>
+                            <li><a href="{{url('/')}}">Главная</a></li>
                             <li><a href="#">О донате</a></li>
                             <li><a href="#">Магазин</a></li>
                             <li><a href="#">Правила</a></li>
@@ -34,11 +34,11 @@
                 </nav>
                 <div class="row p-2 top-nav">
                     <div class="col-sm-3 text-nav logo">
-                        <a href="">NetherCraft Project</a>
+                        <a href="{{url('/')}}">NetherCraft Project</a>
                     </div>
                     <div class="col-sm-6 d-none d-sm-block text-center" style="padding-top: 5px">
                         <div class="row text-nav">
-                            <div class="col-3 w-50"><a href="" class="a-none social">Главная</a></div>
+                            <div class="col-3 w-50"><a href="{{url('/')}}" class="a-none social">Главная</a></div>
                             <div class="col-3 w-50"><a href="" class="a-none social">О донате</a></div>
                             <div class="col-3 w-50"><a href="" class="a-none social">Магазин</a></div>
                             <div class="col-3 w-50"><a href="" class="a-none social">Правила</a></div>
