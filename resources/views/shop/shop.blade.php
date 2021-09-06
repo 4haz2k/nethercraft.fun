@@ -12,7 +12,7 @@
             Игровые предметы
         </div>
         <div class="col-sm-12 col-md-3 my-3">
-            <div class="rectangle item-block">
+            <div class="rectangle item-block" id="1">
                 <div class="item-img py-3">
                     <img src="/img/items/2_002.png" alt="" width="72" height="72">
                 </div>
@@ -20,25 +20,25 @@
                     Земля
                 </div>
                 <div class="item-quantities py-3">
-                    <div class="item-more text-center">
-                        <button class="item-button minus_button"></button>
+                    <div class="item-less text-center">
+                        <button id="lessQuantities" class="item-button minus_button"></button>
                     </div>
                     <div class="item-field">
-                        <input type="text" class="field_button text-center" placeholder="Кол-во">
+                        <input id="field" type="text" class="field_button text-center" placeholder="Кол-во" value="1">
                     </div>
-                    <div class="item-less text-center">
-                        <button class="item-button plus_button"></button>
+                    <div class="item-more text-center">
+                        <button id="addQuantities" class="item-button plus_button"></button>
                     </div>
                 </div>
                 <div class="item-add text-center">
-                    <button class="buy-item">
+                    <button id="buy_item" class="buy-item">
                         Добавить
                     </button>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-3 my-3">
-            <div class="rectangle item-block">
+            <div class="rectangle item-block" id="2">
                 <div class="item-img py-3">
                     <img src="/img/items/2_002.png" alt="" width="72" height="72">
                 </div>
@@ -46,25 +46,25 @@
                     Земля
                 </div>
                 <div class="item-quantities py-3">
-                    <div class="item-more text-center">
-                        <button class="item-button minus_button"></button>
+                    <div class="item-less text-center">
+                        <button id="lessQuantities" class="item-button minus_button"></button>
                     </div>
                     <div class="item-field">
-                        <input type="text" class="field_button text-center" placeholder="Кол-во">
+                        <input id="field" type="text" class="field_button text-center" placeholder="Кол-во" value="1">
                     </div>
-                    <div class="item-less text-center">
-                        <button class="item-button plus_button"></button>
+                    <div class="item-more text-center">
+                        <button id="addQuantities" class="item-button plus_button"></button>
                     </div>
                 </div>
                 <div class="item-add text-center">
-                    <button class="buy-item">
+                    <button id="buy_item" class="buy-item">
                         Добавить
                     </button>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-3 my-3">
-            <div class="rectangle item-block">
+            <div class="rectangle item-block" id="3">
                 <div class="item-img py-3">
                     <img src="/img/items/2_002.png" alt="" width="72" height="72">
                 </div>
@@ -72,96 +72,18 @@
                     Земля
                 </div>
                 <div class="item-quantities py-3">
-                    <div class="item-more text-center">
-                        <button class="item-button minus_button"></button>
+                    <div class="item-less text-center">
+                        <button id="lessQuantities" class="item-button minus_button"></button>
                     </div>
                     <div class="item-field">
-                        <input type="text" class="field_button text-center" placeholder="Кол-во">
+                        <input id="field" type="text" class="field_button text-center" placeholder="Кол-во" value="1">
                     </div>
-                    <div class="item-less text-center">
-                        <button class="item-button plus_button"></button>
+                    <div class="item-more text-center">
+                        <button id="addQuantities" class="item-button plus_button"></button>
                     </div>
                 </div>
                 <div class="item-add text-center">
-                    <button class="buy-item">
-                        Добавить
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-3 my-3">
-            <div class="rectangle item-block">
-                <div class="item-img py-3">
-                    <img src="/img/items/2_002.png" alt="" width="72" height="72">
-                </div>
-                <div class="item-title py-2">
-                    Земля
-                </div>
-                <div class="item-quantities py-3">
-                    <div class="item-more text-center">
-                        <button class="item-button minus_button"></button>
-                    </div>
-                    <div class="item-field">
-                        <input type="text" class="field_button text-center" placeholder="Кол-во">
-                    </div>
-                    <div class="item-less text-center">
-                        <button class="item-button plus_button"></button>
-                    </div>
-                </div>
-                <div class="item-add text-center">
-                    <button class="buy-item">
-                        Добавить
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-3 my-3">
-            <div class="rectangle item-block">
-                <div class="item-img py-3">
-                    <img src="/img/items/2_002.png" alt="" width="72" height="72">
-                </div>
-                <div class="item-title py-2">
-                    Земля
-                </div>
-                <div class="item-quantities py-3">
-                    <div class="item-more text-center">
-                        <button class="item-button minus_button"></button>
-                    </div>
-                    <div class="item-field">
-                        <input type="text" class="field_button text-center" placeholder="Кол-во">
-                    </div>
-                    <div class="item-less text-center">
-                        <button class="item-button plus_button"></button>
-                    </div>
-                </div>
-                <div class="item-add text-center">
-                    <button class="buy-item">
-                        Добавить
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-3 my-3">
-            <div class="rectangle item-block">
-                <div class="item-img py-3">
-                    <img src="/img/items/2_002.png" alt="" width="72" height="72">
-                </div>
-                <div class="item-title py-2">
-                    Земля
-                </div>
-                <div class="item-quantities py-3">
-                    <div class="item-more text-center">
-                        <button class="item-button minus_button"></button>
-                    </div>
-                    <div class="item-field">
-                        <input type="text" class="field_button text-center" placeholder="Кол-во">
-                    </div>
-                    <div class="item-less text-center">
-                        <button class="item-button plus_button"></button>
-                    </div>
-                </div>
-                <div class="item-add text-center">
-                    <button class="buy-item">
+                    <button id="buy_item" class="buy-item">
                         Добавить
                     </button>
                 </div>

@@ -17,7 +17,8 @@ mix.postCss('resources/css/layout.css', 'public/css')
     .postCss('resources/css/shop/shop.css', 'public/css/shop');
 
 mix.js('resources/js/mainpage.js', 'public/js')
-    .js('resources/js/particles.js', 'public/js');
+    .js('resources/js/particles.js', 'public/js')
+    .js('resources/js/shop.js', 'public/js');
 
 mix.copy('resources/fonts/Rubik-Italic-VariableFont_wght.ttf', 'public/fonts')
     .copy('resources/fonts/Rubik-VariableFont_wght.ttf', 'public/fonts')

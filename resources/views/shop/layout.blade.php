@@ -107,5 +107,12 @@
             </div>
         </div>
     </footer>
+    <script src="{{ mix('/js/jquery.min.js') }}" ver="1.0"></script>
+    <script src="{{ mix('/js/shop.js') }}"></script>
+    <script>
+        var _token = '{{csrf_token()}}';
+    </script>
+    <script src="https://use.fontawesome.com/fd45a37d11.js"></script>
 </body>
+
 </html>
