@@ -1,18 +1,18 @@
 .footer-title{
-    color: black !important;
+    color: white !important;
 }
 
 .footer-item:hover{
-    color: black !important;
+    color: white !important;
 }
 
 .logo-footer{
-    color: black !important;
+    color: white !important;
 }
 
 .donate-title{
     font-family: Rubik;
-    color: black;
+    color: white;
     font-weight: 700;
     font-size: 2rem;
 }
