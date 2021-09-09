@@ -40,9 +40,26 @@ var ItemsShop = {
         id: $(element).parents().eq(1).attr('id'),
         qty: $(element).parents().eq(1).find($('.field_button')).val()
       },
-      success: function success(data) {
-        var data = JSON.parse(data);
-        console.log(data);
+      success: function success(response) {
+        console.log(response.response);
+        var that = $(element).closest('.item-block').find('img');
+        var cart = $("#cartt");
+        var w = that.width();
+        that.clone().css({
+          'width': w,
+          'position': 'absolute',
+          'z-index': '9999',
+          top: that.offset().top,
+          left: that.offset().left
+        }).appendTo("body").animate({
+          opacity: 0.05,
+          left: cart.offset()['left'],
+          top: cart.offset()['top'],
+          width: 20,
+          height: 20
+        }, 1000, function () {
+          $(this).remove();
+        });
       }
     });
   }
@@ -56,6 +73,8 @@ $(document).on("click", "#lessQuantities", function () {
 });
 $(document).on("click", "#buy_item", function () {
   ItemsShop.buyItem(this);
-});
+}); //particles
+
+particlesJS.load('particles-js', 'config/particlesjs-config-two.json');
 /******/ })()
 ;
