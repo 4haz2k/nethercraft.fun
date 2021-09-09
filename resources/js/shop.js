@@ -78,4 +78,4 @@ $(document).on("click","#buy_item", function () {
 
 
 //particles
-particlesJS.load('particles-js', 'config/particlesjs-config.json');
+particlesJS.load('particles-js', 'config/particlesjs-config-two.json');

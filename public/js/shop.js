@@ -75,6 +75,6 @@ $(document).on("click", "#buy_item", function () {
   ItemsShop.buyItem(this);
 }); //particles
 
-particlesJS.load('particles-js', 'config/particlesjs-config.json');
+particlesJS.load('particles-js', 'config/particlesjs-config-two.json');
 /******/ })()
 ;

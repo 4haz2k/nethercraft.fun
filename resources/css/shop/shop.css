@@ -1,18 +1,18 @@
 .footer-title{
-    color: black !important;
+    color: white !important;
 }
 
 .footer-item:hover{
-    color: black !important;
+    color: white !important;
 }
 
 .logo-footer{
-    color: black !important;
+    color: white !important;
 }
 
 .donate-title{
     font-family: Rubik;
-    color: black;
+    color: white;
     font-weight: 700;
     font-size: 2rem;
 }
@@ -115,4 +115,18 @@ EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
 
 .buy-item{
     width: 90%;
+}
+
+@media all and (min-width: 920px) {
+    .item-card{
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media all and (max-width: 544px) {
+    .container-fix-xs{
+        max-width: calc(100% - 100px) !important;
+    }
 }

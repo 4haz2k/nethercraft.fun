@@ -117,3 +117,16 @@ EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
     width: 90%;
 }
 
+@media all and (min-width: 920px) {
+    .item-card{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media all and (max-width: 544px) {
+    .container-fix-xs{
+        max-width: calc(100% - 100px) !important;
+    }
+}
+
