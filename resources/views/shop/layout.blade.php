@@ -110,6 +110,7 @@
     <script src="{{ mix('/js/jquery.min.js') }}" ver="1.0"></script>
     <script src="{{ mix('/js/particles.js') }}" ver="1.0"></script>
     <script src="{{ mix('/js/shop.js') }}"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.3.0/es5-shim.js'></script>
     <script>
         var _token = '{{csrf_token()}}';
     </script>

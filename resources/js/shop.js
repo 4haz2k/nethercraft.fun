@@ -5,6 +5,9 @@ var ItemsShop = {
         if(field === ''){
             $(element).parents().eq(1).find($('.field_button')).val(1);
         }
+        else if(parseInt(field) >= 9999){
+            $(element).parents().eq(1).find($('.field_button')).val(9999);
+        }
         else{
             $(element).parents().eq(1).find($('.field_button')).val(parseInt(field) + 1);
         }
@@ -28,6 +31,12 @@ var ItemsShop = {
         if(field === ''){
             $(element).parents().eq(1).find($('.field_button')).val(1);
         }
+        else if (parseInt(field) < 1){
+            $(element).parents().eq(1).find($('.field_button')).val(1);
+        }
+        else{
+            $(element).parents().eq(1).find($('.field_button')).val(1);
+        }
         $.ajax({
             url: "/ajax/addItem",
             type:'POST',
@@ -38,9 +47,9 @@ var ItemsShop = {
             },
             success: function(response) {
                 console.log(response.response);
-                var that = $(element).closest('.item-block').find('img');
-                var cart = $("#cartt");
-                var w = that.width();
+                let that = $(element).closest('.item-block').find('img');
+                let cart = $(".cart-card");
+                let w = that.width();
                 that.clone()
                     .css({'width' : w,
                         'position' : 'absolute',
@@ -79,3 +88,27 @@ $(document).on("click","#buy_item", function () {
 
 //particles
 particlesJS.load('particles-js', 'config/particlesjs-config-two.json');
+
+//cart card
+// let cartWrap = $('#cartWrap'),
+//     cartCard = $('.cartCard'),
+//     startPosition = cartWrap.offset().top,
+//     // stopPosition = $('#stickyStop').offset().top - cartCard.outerHeight();
+//     stopPosition = $('.cart').offset().top - cartCard.outerHeight();
+//
+// $(document).scroll(function () {
+//     //stick nav to top of page
+//     let y = $(this).scrollTop()
+//
+//     if (y > startPosition) {
+//         cartCard.addClass('sticky');
+//         if (y > stopPosition) {
+//             cartCard.css('top', stopPosition - y);
+//         } else {
+//             cartCard.css('top', "50%");
+//         }
+//     } else {
+//         cartCard.removeClass('sticky');
+//     }
+// });
+jQuery('.cartCard').stickyfloat({ duration: 400 });
