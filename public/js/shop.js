@@ -10,6 +10,8 @@ var ItemsShop = {
 
     if (field === '') {
       $(element).parents().eq(1).find($('.field_button')).val(1);
+    } else if (parseInt(field) >= 9999) {
+      $(element).parents().eq(1).find($('.field_button')).val(9999);
     } else {
       $(element).parents().eq(1).find($('.field_button')).val(parseInt(field) + 1);
     }
@@ -30,6 +32,10 @@ var ItemsShop = {
 
     if (field === '') {
       $(element).parents().eq(1).find($('.field_button')).val(1);
+    } else if (parseInt(field) < 1) {
+      $(element).parents().eq(1).find($('.field_button')).val(1);
+    } else {
+      $(element).parents().eq(1).find($('.field_button')).val(1);
     }
 
     $.ajax({
@@ -43,7 +49,7 @@ var ItemsShop = {
       success: function success(response) {
         console.log(response.response);
         var that = $(element).closest('.item-block').find('img');
-        var cart = $("#cartt");
+        var cart = $(".cart-card");
         var w = that.width();
         that.clone().css({
           'width': w,
@@ -75,6 +81,31 @@ $(document).on("click", "#buy_item", function () {
   ItemsShop.buyItem(this);
 }); //particles
 
-particlesJS.load('particles-js', 'config/particlesjs-config-two.json');
+particlesJS.load('particles-js', 'config/particlesjs-config-two.json'); //cart card
+// let cartWrap = $('#cartWrap'),
+//     cartCard = $('.cartCard'),
+//     startPosition = cartWrap.offset().top,
+//     // stopPosition = $('#stickyStop').offset().top - cartCard.outerHeight();
+//     stopPosition = $('.cart').offset().top - cartCard.outerHeight();
+//
+// $(document).scroll(function () {
+//     //stick nav to top of page
+//     let y = $(this).scrollTop()
+//
+//     if (y > startPosition) {
+//         cartCard.addClass('sticky');
+//         if (y > stopPosition) {
+//             cartCard.css('top', stopPosition - y);
+//         } else {
+//             cartCard.css('top', "50%");
+//         }
+//     } else {
+//         cartCard.removeClass('sticky');
+//     }
+// });
+
+jQuery('.cartCard').stickyfloat({
+  duration: 400
+});
 /******/ })()
 ;

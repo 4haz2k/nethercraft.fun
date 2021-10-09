@@ -14,7 +14,8 @@ class ShopController extends Controller
      */
     public function index()
     {
-        return view('shop.shop');
+        $items = Item::all();
+        return view('shop.shop', compact('items'));
     }
 
     public function addItem(Request $request){

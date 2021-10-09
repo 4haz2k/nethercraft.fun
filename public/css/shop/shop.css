@@ -22,11 +22,10 @@ EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
 */
 
 .rectangle{
-    background: navajowhite;
-    width: 180px;
-    height: 250px;
-    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 5%;
+    background-image: url("/img/shop/items/card.png");
+    width: 250px;
+    height: 380px;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
 }
 
 .item-block{
@@ -37,16 +36,23 @@ EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
 .item-block .item-img{
     text-align: center;
 }
+.item-background{
+    background: url(/img/shop/items/item_background.png);
+    width: 130px;
+    height: 143px;
+    margin: auto auto;
+}
 
 .item-block .item-title{
     width: 90%;
     height: 35px;
-    background: gray;
-    border-radius: 5%;
-    font-size: 1rem;
-    margin: 0 auto;
+    font-size: 1.4rem;
     text-align: center;
     padding: 8px 0;
+    margin: -12px auto 0 auto;
+    font-weight: 700;
+    color: white;
+    font-family: 'Rubik';
 }
 
 .item-quantities{
@@ -58,12 +64,14 @@ EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
     justify-content: left;
     flex: 0 0 25%;
     max-width: 25%;
+    z-index: 5;
 }
 
 .item-less{
     justify-content: right;
     flex: 0 0 25%;
     max-width: 25%;
+    z-index: 5;
 }
 
 .item-field{
@@ -73,7 +81,6 @@ EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
 }
 
 .item-button{
-    color: inherit;
     border: none;
     padding: 0;
     font: inherit;
@@ -83,38 +90,105 @@ EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
 
 .plus_button{
     background-image: url("/img/shop/items/plus.png");
-    height: 20px;
-    width: 20px;
+    background-color: transparent;
+    height: 65px;
+    width: 59px;
     transition: all 0.2s;
+    margin: 0 0 0 -40px;
 }
 
-.plus_button:hover{
-    background-image: url("/img/shop/items/plus_hover.png");
+.plus_button:active{
+    background-image: url("/img/shop/items/plus_click.png");
+    background-color: transparent;
+    height: 65px;
+    width: 59px;
 }
 
 .minus_button{
     background-image: url("/img/shop/items/minus.png");
-    height: 20px;
-    width: 20px;
+    background-color: transparent;
+    height: 65px;
+    width: 59px;
     transition: all 0.2s;
+    margin: 0 -42px 0 0;
 }
 
-.minus_button:hover{
-    background-image: url("/img/shop/items/minus_hover.png");
-    height: 20px;
-    width: 20px;
-    transition: all 0.2s;
-    margin: auto auto;
+.minus_button:active{
+    background-image: url("/img/shop/items/minus_click.png");
+    background-color: transparent;
+    height: 65px;
+    width: 59px;
 }
 
 .field_button{
-    width: 100%;
-    height: 85%;
-    margin: auto auto;
+    background-image: url(/img/shop/items/qty.png);
+    background-color: transparent;
+    width: 191px;
+    height: 44px;
+    outline: none;
+    margin: 11px -33.6px 0 -33.6px;
+    color: white;
+    font-family: 'Rubik';
+    font-size: 24px;
+}
+.field_button:hover, .field_button:focus{
+    font-size: 24px !important;
+    font-family: 'Rubik' !important;
 }
 
 .buy-item{
-    width: 90%;
+    background-image: url("/img/shop/items/button.png");
+    background-color: white;
+    width: 120px;
+    height: 33px;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 4px;
+}
+.buy-item:active{
+    background-image: url("/img/shop/items/button_click.png");
+    background-color: #ff7a00;
+    width: 120px;
+    height: 33px;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#cartWrap{
+    height: 50px;
+    top: 0;
+}
+
+.sticky{
+    position: fixed;
+    top:0;
+}
+
+.cartCard{
+    height: 200px;
+    width: 150px;
+    background-color: white;
+    right: 10px;
+    border-radius: 10px 0 0 10px;
+    z-index: 10;
+}
+
+.item-add{
+    margin-top: 15px;
+}
+
+input, input:active, input:hover, input:focus {
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 @media all and (min-width: 920px) {
@@ -129,4 +203,5 @@ EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
         max-width: calc(100% - 100px) !important;
     }
 }
+
 
