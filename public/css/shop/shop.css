@@ -183,6 +183,210 @@ EXAMPLE OF HOW THE OBJECTS WILL LOOK  (NEED TO REMOVE IN FUTURE)
     margin-top: 15px;
 }
 
+.load-more{
+    margin: 20px auto;
+    width: 60%;
+    min-height: 40px;
+    border-radius: 5px;
+    color: white;
+    moz-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+    background-size: 400% 100%;
+
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.load-more:hover{
+    background-position: 100% 0;
+    moz-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.load-more:focus {
+    outline: none;
+}
+
+.load-more-text{
+    font-family: 'Rubik';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.load-more-color{
+    background-image: linear-gradient(to right, #2a2a2a, #4c4c4c, #e7ad6c, #ff8700);
+    box-shadow: 0 4px 15px 0 #fff;
+}
+
+.categories{
+    margin: 20px 0;
+}
+
+.category-button{
+    color: white;
+    background-image: linear-gradient(to right, #2a2a2a, #4c4c4c, #e7ad6c, #ff8700);
+    box-shadow: 0 0 10px 0 #969696;
+    border-radius: 3px;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-size: 400% 100%;
+    width: 180px;
+    height: 30px;
+    margin: 10px 10px;
+
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.category-button:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.category-button-text{
+    font-family: 'Rubik';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.categories .selected{
+    background-position: 100% 0;
+}
+
+.cart-of-items{
+    width: 170px;
+    height: 220px;
+    background-color: #515151;
+    position: sticky;
+    top: 40%;
+    z-index: 1000;
+    left: 100%;
+    border-radius: 6px 0 0 6px;
+    box-shadow: 0 0 10px 0 #969696;
+    font-weight: normal;
+    color: white;
+    font-family: Rubik;
+}
+
+.cart-title{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 22px;
+}
+
+.cart-item{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 5px 10px 5px 10px;
+}
+
+.cart-item .cart-item-title{
+    flex: 0 0 50%;
+    max-width: 100%;
+    text-align: left;
+}
+
+.cart-item .count{
+    flex: 0 0 50%;
+    max-width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cart-total{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 5px 5px 5px 10px;
+    padding-right: 5px;
+}
+
+.cart-total .cart-total-title{
+    flex: 0 0 50%;
+    max-width: 100%;
+    text-align: left;
+}
+
+.cart-total .cart-price{
+    flex: 0 0 50%;
+    max-width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+.view-cart{
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0;
+    color: white;
+}
+
+.view-cart:hover{
+    color: #ff8700;
+}
+
+.checkout-cart{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.checkout{
+    width: 90%;
+    background-image: linear-gradient(to right, #2a2a2a, #4c4c4c, #e7ad6c, #ff8700);
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-size: 400% 100%;
+    border-radius: 3px;
+    color: white;
+    font-family: Rubik;
+    font-weight: normal;
+
+
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.checkout:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.cart-link{
+    color: white;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.cart-link:hover{
+    color: #ff8700;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+hr{
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    height: 2px;
+    margin: 10px 5px;
+}
+
+#particles-js{
+    z-index: -1 !important;
+}
+
 input, input:active, input:hover, input:focus {
     border: none;
     padding: 0;
@@ -191,10 +395,31 @@ input, input:active, input:hover, input:focus {
     outline: inherit;
 }
 
-@media all and (min-width: 920px) {
+@media all and (min-width: 700px) {
+    .item-card{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media all and (min-width: 940px) {
+    .item-card{
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+}
+
+@media all and (min-width: 1180px) {
     .item-card{
         flex: 0 0 25%;
         max-width: 25%;
+    }
+}
+
+@media all and (min-width: 1440px) {
+    .item-card{
+        flex: 0 0 20%;
+        max-width: 20%;
     }
 }
 

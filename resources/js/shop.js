@@ -1,4 +1,19 @@
-//DOM items: $(element).parents().eq(1).find($('.field_button'))
+$(document).ready(function () {
+    $.ajax({
+        url: "/ajax/getCart",
+        type:'POST',
+        data: {
+            _token: _token,
+        },
+        success: function(response) {
+            console.log(response);
+            $("#item-count").html(response.totalCount);
+            $("#total-price").html(response.totalPrice);
+
+        }
+    });
+});
+
 var ItemsShop = {
     addQuantities: function (element){
         var field = $(element).parents().eq(1).find($('.field_button')).val();
@@ -34,9 +49,6 @@ var ItemsShop = {
         else if (parseInt(field) < 1){
             $(element).parents().eq(1).find($('.field_button')).val(1);
         }
-        else{
-            $(element).parents().eq(1).find($('.field_button')).val(1);
-        }
         $.ajax({
             url: "/ajax/addItem",
             type:'POST',
@@ -46,9 +58,9 @@ var ItemsShop = {
                 qty: $(element).parents().eq(1).find($('.field_button')).val()
             },
             success: function(response) {
-                console.log(response.response);
+                console.log(response);
                 let that = $(element).closest('.item-block').find('img');
-                let cart = $(".cart-card");
+                let cart = $(".cart-total-title");
                 let w = that.width();
                 that.clone()
                     .css({'width' : w,
@@ -66,11 +78,63 @@ var ItemsShop = {
                     }, 1000, function() {
                         $(this).remove();
                     });
+                $("#item-count").html(response.totalCount);
+                $("#total-price").html(response.totalPrice);
 
             }
         });
     }
 }
+
+$("#see-more").click(function() {
+    let $div = $($(this).data('div')); //div to append
+    let $link = $(this).data('link'); //current URL
+    let $category = "&category=" + $(".selected").data("category");
+
+    let $page = $(this).data('page'); //get the next page #
+    let $href = $link + $page + $category; //complete URL
+
+    $.get($href, function(response) { //append data
+        let $html = $(response).find("#items").html();
+        $div.append($html);
+
+        let $count = $(response).find("#items").children().length;
+
+        if($count < 20)
+            $("#see-more").hide();
+        else
+            $("#see-more").show();
+    });
+
+    $(this).data('page', (parseInt($page) + 1)); //update page #
+});
+
+$(".category-button").click(function (){
+    $see_more = $("#see-more");
+    $see_more.show();
+
+    let $link = $(this).data('link'); //current URL
+    $(".selected").removeClass("selected");
+    $(this).addClass("selected");
+
+    let $category = "&category=" + $(this).data("category");
+    let $page = 1;
+    let $href = $link + $page + $category; //complete URL
+
+    $.get($href, function(response) { //append data
+        let $html = $(response).find("#items").html();
+        $("#items").html($html);
+
+        let $count = $(response).find("#items").children().length;
+
+        if($count < 20)
+            $("#see-more").hide();
+        else
+            $("#see-more").show();
+    });
+
+    $see_more.data('page', 2);
+});
 
 //Events add, less, buy
 $(document).on("click","#addQuantities", function () {
@@ -84,7 +148,6 @@ $(document).on("click","#lessQuantities", function () {
 $(document).on("click","#buy_item", function () {
     ItemsShop.buyItem(this);
 });
-
 
 //particles
 particlesJS.load('particles-js', 'config/particlesjs-config-two.json');

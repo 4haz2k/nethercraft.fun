@@ -3,7 +3,20 @@ var __webpack_exports__ = {};
 /*!******************************!*\
   !*** ./resources/js/shop.js ***!
   \******************************/
-//DOM items: $(element).parents().eq(1).find($('.field_button'))
+$(document).ready(function () {
+  $.ajax({
+    url: "/ajax/getCart",
+    type: 'POST',
+    data: {
+      _token: _token
+    },
+    success: function success(response) {
+      console.log(response);
+      $("#item-count").html(response.totalCount);
+      $("#total-price").html(response.totalPrice);
+    }
+  });
+});
 var ItemsShop = {
   addQuantities: function addQuantities(element) {
     var field = $(element).parents().eq(1).find($('.field_button')).val();
@@ -34,8 +47,6 @@ var ItemsShop = {
       $(element).parents().eq(1).find($('.field_button')).val(1);
     } else if (parseInt(field) < 1) {
       $(element).parents().eq(1).find($('.field_button')).val(1);
-    } else {
-      $(element).parents().eq(1).find($('.field_button')).val(1);
     }
 
     $.ajax({
@@ -47,9 +58,9 @@ var ItemsShop = {
         qty: $(element).parents().eq(1).find($('.field_button')).val()
       },
       success: function success(response) {
-        console.log(response.response);
+        console.log(response);
         var that = $(element).closest('.item-block').find('img');
-        var cart = $(".cart-card");
+        var cart = $(".cart-total-title");
         var w = that.width();
         that.clone().css({
           'width': w,
@@ -66,10 +77,51 @@ var ItemsShop = {
         }, 1000, function () {
           $(this).remove();
         });
+        $("#item-count").html(response.totalCount);
+        $("#total-price").html(response.totalPrice);
       }
     });
   }
-}; //Events add, less, buy
+};
+$("#see-more").click(function () {
+  var $div = $($(this).data('div')); //div to append
+
+  var $link = $(this).data('link'); //current URL
+
+  var $category = "&category=" + $(".selected").data("category");
+  var $page = $(this).data('page'); //get the next page #
+
+  var $href = $link + $page + $category; //complete URL
+
+  $.get($href, function (response) {
+    //append data
+    var $html = $(response).find("#items").html();
+    $div.append($html);
+    var $count = $(response).find("#items").children().length;
+    if ($count < 20) $("#see-more").hide();else $("#see-more").show();
+  });
+  $(this).data('page', parseInt($page) + 1); //update page #
+});
+$(".category-button").click(function () {
+  $see_more = $("#see-more");
+  $see_more.show();
+  var $link = $(this).data('link'); //current URL
+
+  $(".selected").removeClass("selected");
+  $(this).addClass("selected");
+  var $category = "&category=" + $(this).data("category");
+  var $page = 1;
+  var $href = $link + $page + $category; //complete URL
+
+  $.get($href, function (response) {
+    //append data
+    var $html = $(response).find("#items").html();
+    $("#items").html($html);
+    var $count = $(response).find("#items").children().length;
+    if ($count < 20) $("#see-more").hide();else $("#see-more").show();
+  });
+  $see_more.data('page', 2);
+}); //Events add, less, buy
 
 $(document).on("click", "#addQuantities", function () {
   ItemsShop.addQuantities(this);

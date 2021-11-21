@@ -17,3 +17,4 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'news_section']);
 Route::get('news/article_{id}', [App\Http\Controllers\HomeController::class, 'news_current'])->where('id', '\d+');
 Route::get('/shop', [\App\Http\Controllers\ShopController::class, 'index']);
 Route::post('/ajax/addItem', [\App\Http\Controllers\ShopController::class, 'addItem']);
+Route::post('/ajax/getCart', [\App\Http\Controllers\ShopController::class, 'getCart']);
