@@ -1,7 +1,7 @@
 @extends('shop.layout')
 
 @section('title', 'Магазин » NetherCraft Project')
-@section('background', 'background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%), url("/img/shop/layout.png") center 40% no-repeat;')
+@section('background', 'background-image: url("/img/shop/layout.png");')
 @section('title_box', 'Магазин')
 @section('description_box')В этом разделе находятся предметы,<br> привилегии, наборы и прочее.@endsection
 
